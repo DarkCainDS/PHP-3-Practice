@@ -1,0 +1,95 @@
+5. Operadores aritméticos con PHP
+Son aquellos que nos permiten trabajar con operaciones básicas.
+
+Suma, resta, multiplicación, división, módulo y potenciación.
+
+Les comparto unas notas bastante interesantes sobre operadores aritméticos con PHP:
+
+Operadores aritméticos:
+
+Suma: Para sumar dos valores usamos el signo +.
+Resta: Para restar dos valores usamos el signo -.
+Multiplicación: Para multiplicar dos valores usamos el signo *.
+División: Para dividir dos valores usamos el signo /.
+Incremento: Sirve para incrementar un valor numérico en 1, usamos el operador ++. Ejemplo: $value++, sumará 1 a $value.
+Decremento: Sirve para disminuir un valor numérico en 1, usamos el operador --. Ejemplo: $value--, restará 1 a $value.
+Módulo: Sirve para saber el resto de una división entera, usamos el operador %. Ejemplo: 10 % 3; da como resultado 1. Un uso muy polular de este operador es para saber si un número es par o impar:
+//Veamos si es par o impar (si el resultado del módulo del número entre 2 es mayor a 0, es impar):
+echo 10 % 2; //esto imprimirá 0, entonces es PAR
+echo 13 % 2 // esto imprimirá 1, como el resultado es mayor a 0, entonces es IMPAR.
+Aquí viene lo curioso, hay también una forma abreviada de operar con una misma variable, ¿a qué me refiero? A sumarle 10 a una misma variable:
+
+$valorA = 1;
+$valorA = $valorA + 10;
+//Ahora veamos la forma abreviada:
+$valorA+=10;
+//Lo mismo aplica para los demás operadores:
+$valorA-=10;
+$valorA*=10;
+$valorA/=10;
+Pero tenemos más operaciones, pero en este caso tenemos que hacer uso de funciones propias del PHP:
+
+abs($value) —> valor absoluto: Devuelve el valor absoluto de un número. Ejemplo: abs(-10); dará como resultado 10.
+pow($a, $b) —> elevación a la potencia: Eleva el valor a a la potencia de b. Ejemplo: pow(2,3); dará como resultado 8. Nota, también se puede usar el operador ** en vez de pow.
+sqrt($value) —> raiz cuadrada: Da como resultado la raiz cuadrada del valor. Ejemplo: sqrt(4); dará como resultado 2.
+max($a, $b) —> valor máximo : Nos da como resultado el valor máximo entre esos dos valores. Ejemplo: max(4,8); dará como resultado 8.
+min($a, $b) —> valor mínimo: Nos da como resultado el valor mínimo entre esos dos valores. Ejemplo: max(4,8); dará como resultado 4.
+round($value) —> redondear: Redondea un número decimal al entero siguiente si el valor es igual o mayor a .5. Ejemplo: round(3.5); dará como resultado 4, pero round(3.4); dará como resultado 3.
+ceil($value) —> redondear hacia arriba: Redondea un número decimal al entero superior siguiente si el valor es mayor a .0. Ejemplo: ceil(3.3); dará como resultado 4, incluso ceil(3.01); dará como resultado 4.
+floor($value) —> redondear hacia abajo: Redondea un número decimal al entero inferior ignorando si el valor es mayor a .0. Ejemplo: floor(3.7); dará como resultado 3, incluso floor(3.99); dará como resultado 3.
+Comparto código donde pueden ver todos los operadores y funciones con números aplicados.
+
+echo "<br/>";
+echo 40;
+echo "<br/>";
+echo -40.874;
+echo "<br/>";
+echo 5 + 9;
+echo "<br/>";
+echo 10 % 3;
+echo "<br/>";
+echo 4 + 5 * 10;
+echo "<br/>";
+echo (4 + 5) * 10;
+echo "<br/>";
+
+$num = 10;
+
+$num++;
+echo $num;
+echo "<br/>";
+
+$num--;
+echo $num;
+echo "<br/>";
+
+$num += 25;
+echo $num;
+echo "<br/>";
+
+echo abs(-100);
+echo "<br/>";
+
+echo pow(2, 4);
+echo "<br/>";
+
+echo sqrt(144);
+echo "<br/>";
+
+echo max(2, 10);
+echo "<br/>";
+
+echo min(2, 10);
+echo "<br/>";
+
+echo round(3.2);
+echo "<br/>";
+
+echo ceil(3.2);
+echo "<br/>";
+
+echo floor(3.9);
+echo "<br/>";
+Documentación:
+
+https://www.php.net/manual/es/language.operators.arithmetic.php
